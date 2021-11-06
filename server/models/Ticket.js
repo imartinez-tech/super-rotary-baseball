@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const productSchema = new Schema({
+const ticketSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -26,11 +26,11 @@ const productSchema = new Schema({
   },
   category: {
     type: Schema.Types.ObjectId,
-    ref: 'Category',
+    ref: 'Team',
     required: true
   }
 });
 
-const Product = mongoose.model('Product', productSchema);
+const Product = mongoose.model('Ticket', ticketSchema);
 
-module.exports = Product;
+module.exports = Ticket;
