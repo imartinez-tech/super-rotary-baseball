@@ -5,8 +5,6 @@ import { UPDATE_PRODUCTS } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
-// import * as MLBIcons from 'react-mlb-logos';
-import Example from '../logos/mlb';
 import spinner from '../../assets/spinner.gif';
 
 function ProductList() {
@@ -54,7 +52,7 @@ function ProductList() {
             <ProductItem
               key={product._id}
               _id={product._id}
-              image={Example}
+              image={product.image}
               name={product.name}
               price={product.price}
               quantity={product.quantity}
