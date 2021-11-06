@@ -103,8 +103,11 @@ function Detail() {
           </p>
 
           <img
-            src={`/images/${currentProduct.image}`}
+            src={`client/public/images/Angels.jpg`}
             alt={currentProduct.name}
+          />
+          <img 
+          src= 'client/public/images/Angels.jpg'
           />
         </div>
       ) : null}

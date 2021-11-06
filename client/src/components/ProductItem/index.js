@@ -4,12 +4,12 @@ import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
-import Example from "../logos/mlb";
+
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
 
   const {
-    image = Example,
+    image,
     name,
     _id,
     price,
@@ -44,10 +44,17 @@ function ProductItem(item) {
       <Link to={`/products/${_id}`}>
         <img
           alt={name}
-          src={`${image}`}
+          src={`client/public/images/Angels.jpg`}
+          src= 'client/public/images/Angels.jpg'
+          
         />
         <p>{name}</p>
       </Link>
+      <img 
+        src={`client/public/images/Angels.jpg`}
+        src= 'client/public/images/Angels.jpg'
+      
+      />
       <div>
         <div>{quantity} {pluralize("item", quantity)} in stock</div>
         <span>${price}</span>
