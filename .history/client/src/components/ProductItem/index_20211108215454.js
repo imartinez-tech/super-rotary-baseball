@@ -44,8 +44,7 @@ function ProductItem(item) {
       <Link to={`/products/${_id}`}>
         <img
           alt={name}
-          src={`/images/Angels.jpg`}
-          src={`/images/astros.jpg`}
+          src={`client/public/images/Angels.jpg`}
           // src={`/images/${image}`}
         />
         <p>{name}</p>

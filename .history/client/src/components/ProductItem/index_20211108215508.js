@@ -45,7 +45,6 @@ function ProductItem(item) {
         <img
           alt={name}
           src={`/images/Angels.jpg`}
-          src={`/images/astros.jpg`}
           // src={`/images/${image}`}
         />
         <p>{name}</p>

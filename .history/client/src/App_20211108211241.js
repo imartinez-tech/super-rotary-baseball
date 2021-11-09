@@ -18,6 +18,8 @@ import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 
+import logo from './images/MLBlogo.png'
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });

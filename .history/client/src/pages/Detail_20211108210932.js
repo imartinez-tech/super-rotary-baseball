@@ -106,7 +106,9 @@ function Detail() {
             src={`client/public/images/Angels.jpg`}
             alt={currentProduct.name}
           />
-          <img src= 'client/public/images/Angels.jpg' />
+          <img 
+          src= 'client/public/images/Angels.jpg'
+          />
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}

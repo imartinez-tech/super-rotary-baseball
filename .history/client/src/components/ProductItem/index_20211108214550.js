@@ -45,11 +45,16 @@ function ProductItem(item) {
         <img
           alt={name}
           src={`/images/Angels.jpg`}
-          src={`/images/astros.jpg`}
-          // src={`/images/${image}`}
+          // src= 'client/public/images/Angels.jpg'
+          
         />
         <p>{name}</p>
       </Link>
+      <img 
+        src={`client/public/images/Angels.jpg`}
+        src= 'client/public/images/Angels.jpg'
+      
+      />
       <div>
         <div>{quantity} {pluralize("item", quantity)} in stock</div>
         <span>${price}</span>

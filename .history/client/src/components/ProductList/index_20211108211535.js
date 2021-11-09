@@ -7,6 +7,7 @@ import { QUERY_PRODUCTS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
 
+import logo from './images/MLBlogo.png'
 
 function ProductList() {
   const [state, dispatch] = useStoreContext();
@@ -53,7 +54,7 @@ function ProductList() {
             <ProductItem
               key={product._id}
               _id={product._id}
-              image={product.image}
+              image={product.id}
               name={product.name}
               price={product.price}
               quantity={product.quantity}

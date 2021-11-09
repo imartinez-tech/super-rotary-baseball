@@ -20,14 +20,16 @@ db.once('open', async () => {
   const tickets = await Ticket.insertMany([
     {
       name: 'Angels',
-      description:'Class aptent .',
+      description:
+        'Class aptent .',
       image: 'Angels.jpg',
       category: categories[0]._id,
       price: 59.99,
     },
     {
       name: 'Athletics',
-      description:'Praesent sed lacinia rutrum .',
+      description:
+        'Praesent sed lacinia rutrum .',
       image: 'athletics_small.gif',
       category: categories[0]._id,
       price: 59.99,
@@ -35,35 +37,40 @@ db.once('open', async () => {
     {
       name: 'bluejays',
       category: categories[1]._id,
-      description:'Donec volutpat erat erat ipsum us.',
+      description:
+        'Donec volutpat erat erat ipsum us.',
       image: 'blue_jays_small.png',
       price: 59.99,
     },
     {
       name: 'cincinnati',
       category: categories[1]._id,
-      description:'Praesent placerat, odio vel euismod venenatis.',
+      description:
+        'Praesent placerat, odio vel euismod venenatis.',
       image: 'cincinnati_reds_logo_small.gif',
       price: 59.99,
     },
     {
       name: 'cleveland',
       category: categories[1]._id,
-      description:'Vivamus ut turpis in purus.',
+      description:
+        'Vivamus ut turpis in purus.',
       image: 'cleveland_indians_small.png',
       price: 59.99,
     },
     {
       name: 'houston',
       category: categories[2]._id,
-      description:'Vestibulum risus mvitae lobortis mi a leo.',
+      description:
+        'Vestibulum risus mvitae lobortis mi a leo.',
       image: 'huston_astros_small.jpg',
       price: 399.99,
     },
     {
       name: 'Tablet',
       team: teams[2]._id,
-      description:'In sodales, ipsum quis.',
+      description:
+        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
       image: 'tablet.jpg',
       price: 199.99,
       quantity: 30
@@ -71,7 +78,8 @@ db.once('open', async () => {
     {
       name: 'Tales at Bedtime',
       team: teams[3]._id,
-      description:'Lorem ifend rutrum.',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
       image: 'bedtime-book.jpg',
       price: 9.99,
       quantity: 100
@@ -87,7 +95,8 @@ db.once('open', async () => {
     {
       name: 'Set of Plastic Horses',
       team: teams[4]._id,
-      description:'Sed a mauris  sit amet.',
+      description:
+        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
       image: 'plastic-horses.jpg',
       price: 2.99,
       quantity: 1000
@@ -95,7 +104,8 @@ db.once('open', async () => {
     {
       name: 'Teddy Bear',
       team: teams[4]._id,
-      description:'Vestibulum et erat turpis.',
+      description:
+        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
       image: 'teddy-bear.jpg',
       price: 7.99,
       quantity: 100
@@ -103,7 +113,8 @@ db.once('open', async () => {
     {
       name: 'Alphabet Blocks',
       team: teams[4]._id,
-      description:'Morbi consectetur vi.',
+      description:
+        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
       image: 'alphabet-blocks.jpg',
       price: 9.99,
       quantity: 600
