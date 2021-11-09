@@ -10,7 +10,33 @@ db.once('open', async () => {
     { name: 'Blue Jays' },
     { name: 'Mets' },
     { name: 'Diamondbacks' },
-    
+    { name: 'Angels' },
+    { name: 'Astros' },
+    { name: 'Athletics' },
+    { name: 'Minnesotatwins' },
+    { name: 'Cardinals' },
+    { name: 'Coloradorockies' },
+    { name: 'Cubs' },
+    { name: 'Dodgers' },
+    { name: 'Giants' },
+    { name: 'Indians' },
+    { name: 'Mariners' },
+    { name: 'Marlins' },
+    { name: 'Nationals' },
+    { name: 'Orioles' },
+    { name: 'Rangers' },
+    { name: 'Pirates' },
+    { name: 'Rangers' },
+    { name: 'Tampabayrays' },
+    { name: 'Reds' },
+    { name: 'Redsox' },
+    { name: 'Tigers' },
+    { name: 'Whitesox' },
+    { name: 'Yankees' },
+    { name: 'Padres' },
+
+
+
   ]);
 
   console.log('teams seeded');
@@ -22,109 +48,271 @@ db.once('open', async () => {
       name: 'Braves',
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+      image: 'client/public/images/braves.gif',
       team: teams[0]._id,
-      price: 2.99,
+      price: 50.00,
       quantity: 500
     },
     {
-      name: 'Canned Coffee',
+      name: 'Phillies',
       description:
         'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
+      image: 'client/public/images/phillies.gif',
       team: teams[0]._id,
-      price: 1.99,
+      price: 50.00,
       quantity: 500
     },
     {
-      name: 'Toilet Paper',
+      name: 'Bluejays',
       team: teams[1]._id,
       description:
         'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
+      image: 'client/public/images/bluejays.png',
+      price: 50.00,
       quantity: 20
     },
     {
-      name: 'Handmade Soap',
+      name: 'Mets',
       team: teams[1]._id,
       description:
         'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
+      image: 'client/public/images/mets.gif',
+      price: 50.00,
       quantity: 50
     },
     {
-      name: 'Set of Wooden Spoons',
+      name: 'Diamondbacks',
       team: teams[1]._id,
       description:
         'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
-      price: 14.99,
+      image: 'client/public/images/diamondbacks.png',
+      price: 50.00,
       quantity: 100
     },
     {
-      name: 'Camera',
+      name: 'Angels',
       team: teams[2]._id,
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
-      price: 399.99,
+      image: 'client/public/images/Angels.jpg',
+      price: 50.00,
       quantity: 30
     },
     {
-      name: 'Tablet',
+      name: 'Astros',
+      team: teams[2]._id,
+      description:
+        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+      image: 'client/public/images/astros.jpg',
+      price: 50.00,
+      quantity: 30
+    },
+    {
+      name: 'Athletics',
       team: teams[2]._id,
       description:
         'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
-      price: 199.99,
+      image: 'client/public/images/athletics.gif',
+      price: 50.00,
       quantity: 30
     },
     {
-      name: 'Tales at Bedtime',
+      name: 'Cardinals',
       team: teams[3]._id,
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
-      price: 9.99,
+      image: 'client/public/images/cardinals.png',
+      price: 50.00,
       quantity: 100
     },
     {
-      name: 'Spinning Top',
+      name: 'Coloradorockies',
       team: teams[4]._id,
       description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
+      image: 'client/public/images/coloradorockies.png',
+      price: 50.00,
       quantity: 1000
     },
     {
-      name: 'Set of Plastic Horses',
+      name: 'Cubs',
       team: teams[4]._id,
       description:
         'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
-      price: 2.99,
+      image: 'client/public/images/cubs.gif',
+      price: 50.00,
       quantity: 1000
     },
     {
-      name: 'Teddy Bear',
+      name: 'Diamondbacks',
       team: teams[4]._id,
       description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
-      price: 7.99,
+        '',
+      image: 'client/public/images/diamondbacks.png',
+      price: 50.00,
       quantity: 100
     },
     {
-      name: 'Alphabet Blocks',
+      name: 'Dodgers',
       team: teams[4]._id,
       description:
         'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
-      price: 9.99,
+      image: 'client/public/images/dodgers.gif',
+      price: 50.00,
       quantity: 600
-    }
+    },
+    {
+      name: 'Giants',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/giants.jpg',
+      price: 50.00,
+      quantity: 100
+    },
+    {
+      name: 'Indians',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/indians.png',
+      price: 50.00,
+      quantity: 100
+    },
+    {
+      name: 'Mariners',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/mariners.gif',
+      price: 50.00,
+      quantity: 100
+    },
+    {
+      name: 'Marlins',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/marlins.png',
+      price: 50.00,
+      quantity: 100
+    },
+    {
+      name: 'Mets',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/mets.gif',
+      price: 50.00,
+      quantity: 100
+    },
+    {
+      name: 'Minnesotatwins',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/minnesottatwins.png',
+      price: 50.00,
+      quantity: 100
+    },
+    {
+      name: 'Nationals',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/nationals.png',
+      price: 50.00,
+      quantity: 100
+    },
+    {
+      name: 'Orioles',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/orioles.png',
+      price: 50.00,
+      quantity: 100
+    },
+    {
+      name: 'Padres',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/padres.gif',
+      price: 50.00,
+      quantity: 100
+    },
+    {
+      name: 'Pirates',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/pirates.png',
+      price: 50.00,
+      quantity: 100
+    },
+    {
+      name: 'Rangers',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/rangers.jpg',
+      price: 50.00,
+      quantity: 100
+    },
+    {
+      name: 'Rays',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/rays.jpg',
+      price: 50.00,
+      quantity: 100
+    },
+    {
+      name: 'Reds',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/reds.gif',
+      price: 50.00,
+      quantity: 100
+    },
+    {
+      name: 'Redsox',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/redsox.jpg',
+      price: 50.00,
+      quantity: 100
+    },
+    {
+      name: 'Tigers',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/tigers.jpg',
+      price: 50.00,
+      quantity: 100
+    },
+    {
+      name: 'Whitesox',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/whitesox.gif',
+      price: 50.00,
+      quantity: 100
+    },
+    {
+      name: 'Yankees',
+      team: teams[4]._id,
+      description:
+        '',
+      image: 'client/public/images/yankees.gif',
+      price: 50.00,
+      quantity: 100
+    },
   ]);
 
   console.log('tickets seeded');
