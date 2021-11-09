@@ -1,22 +1,22 @@
 import { useReducer } from "react";
 import {
-  UPDATE_PRODUCTS,
+  UPDATE_TICKETS,
   ADD_TO_CART,
   UPDATE_CART_QUANTITY,
   REMOVE_FROM_CART,
   ADD_MULTIPLE_TO_CART,
-  UPDATE_CATEGORIES,
-  UPDATE_CURRENT_CATEGORY,
+  UPDATE_TEAMS,
+  UPDATE_CURRENT_TEAM,
   CLEAR_CART,
   TOGGLE_CART
 } from "./actions";
 
 export const reducer = (state, action) => {
   switch (action.type) {
-    case UPDATE_PRODUCTS:
+    case UPDATE_TICKETS:
       return {
         ...state,
-        products: [...action.products],
+        tickets: [...action.tickets],
       };
 
     case ADD_TO_CART:
@@ -36,17 +36,17 @@ export const reducer = (state, action) => {
       return {
         ...state,
         cartOpen: true,
-        cart: state.cart.map(product => {
-          if (action._id === product._id) {
-            product.purchaseQuantity = action.purchaseQuantity
+        cart: state.cart.map(ticket => {
+          if (action._id === ticket._id) {
+            ticket.purchaseQuantity = action.purchaseQuantity
           }
-          return product
+          return ticket
         })
       };
 
     case REMOVE_FROM_CART:
-      let newState = state.cart.filter(product => {
-        return product._id !== action._id;
+      let newState = state.cart.filter(ticket => {
+        return ticket._id !== action._id;
       });
 
       return {
@@ -68,16 +68,16 @@ export const reducer = (state, action) => {
         cartOpen: !state.cartOpen
       };
 
-    case UPDATE_CATEGORIES:
+    case UPDATE_TEAMS:
       return {
         ...state,
-        categories: [...action.categories],
+        teams: [...action.teams],
       };
 
-    case UPDATE_CURRENT_CATEGORY:
+    case UPDATE_CURRENT_TEAM:
       return {
         ...state,
-        currentCategory: action.currentCategory
+        currentTeam: action.currentTeam
       }
 
     default:
