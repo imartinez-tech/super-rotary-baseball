@@ -47,7 +47,7 @@ db.once('open', async () => {
     {
       name: 'Braves',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+        '',
       image: 'client/public/images/braves.gif',
       team: teams[0]._id,
       price: 50.00,
@@ -56,7 +56,7 @@ db.once('open', async () => {
     {
       name: 'Phillies',
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
+        '',
       image: 'client/public/images/phillies.gif',
       team: teams[0]._id,
       price: 50.00,
@@ -66,7 +66,7 @@ db.once('open', async () => {
       name: 'Bluejays',
       team: teams[1]._id,
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
+        '',
       image: 'client/public/images/bluejays.png',
       price: 50.00,
       quantity: 20
@@ -75,7 +75,7 @@ db.once('open', async () => {
       name: 'Mets',
       team: teams[1]._id,
       description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
+        '',
       image: 'client/public/images/mets.gif',
       price: 50.00,
       quantity: 50
@@ -84,7 +84,7 @@ db.once('open', async () => {
       name: 'Diamondbacks',
       team: teams[1]._id,
       description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
+        '',
       image: 'client/public/images/diamondbacks.png',
       price: 50.00,
       quantity: 100
@@ -93,7 +93,7 @@ db.once('open', async () => {
       name: 'Angels',
       team: teams[2]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+        '',
       image: 'client/public/images/Angels.jpg',
       price: 50.00,
       quantity: 30
@@ -102,7 +102,7 @@ db.once('open', async () => {
       name: 'Astros',
       team: teams[2]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+        '',
       image: 'client/public/images/astros.jpg',
       price: 50.00,
       quantity: 30
@@ -111,7 +111,7 @@ db.once('open', async () => {
       name: 'Athletics',
       team: teams[2]._id,
       description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
+        '',
       image: 'client/public/images/athletics.gif',
       price: 50.00,
       quantity: 30
@@ -120,7 +120,7 @@ db.once('open', async () => {
       name: 'Cardinals',
       team: teams[3]._id,
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+        '',
       image: 'client/public/images/cardinals.png',
       price: 50.00,
       quantity: 100
@@ -128,7 +128,7 @@ db.once('open', async () => {
     {
       name: 'Coloradorockies',
       team: teams[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
+      description: '',
       image: 'client/public/images/coloradorockies.png',
       price: 50.00,
       quantity: 1000
@@ -137,7 +137,7 @@ db.once('open', async () => {
       name: 'Cubs',
       team: teams[4]._id,
       description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
+        '',
       image: 'client/public/images/cubs.gif',
       price: 50.00,
       quantity: 1000
@@ -145,17 +145,16 @@ db.once('open', async () => {
     {
       name: 'Diamondbacks',
       team: teams[4]._id,
-      description:
-        '',
+      description:'',
       image: 'client/public/images/diamondbacks.png',
-      price: 50.00,
+      price: 7.99,
       quantity: 100
     },
     {
       name: 'Dodgers',
       team: teams[4]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
+        '',
       image: 'client/public/images/dodgers.gif',
       price: 50.00,
       quantity: 600
