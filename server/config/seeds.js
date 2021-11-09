@@ -1,5 +1,5 @@
 const db = require('./connection');
-const { User, Ticket, Team } = require('../models');
+const { User, Ticket, Team, } = require('../models');
 
 db.once('open', async () => {
   await Team.deleteMany();
