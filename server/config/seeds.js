@@ -1,5 +1,5 @@
 const db = require('./connection');
-const { User, Ticket, Team } = require('../models');
+const { User, Ticket, Team, } = require('../models');
 
 db.once('open', async () => {
   await Team.deleteMany();
@@ -54,6 +54,7 @@ db.once('open', async () => {
       quantity: 500
     },
     {
+<<<<<<< HEAD
       name: 'Phillies',
       description:
         '',
@@ -97,6 +98,41 @@ db.once('open', async () => {
       image: 'client/public/images/Angels.jpg',
       price: 50.00,
       quantity: 30
+=======
+      name: 'Athletics',
+      description:'Praesent sed lacinia rutrum .',
+      image: 'athletics_small.gif',
+      category: categories[1]._id,
+      price: 59.99,
+    },
+    {
+      name: 'bluejays',
+      category: categories[2]._id,
+      description:'Donec volutpat erat erat ipsum us.',
+      image: 'blue_jays_small.png',
+      price: 59.99,
+    },
+    {
+      name: 'cincinnati',
+      category: categories[3]._id,
+      description:'Praesent placerat, odio vel euismod venenatis.',
+      image: 'cincinnati_reds_logo_small.gif',
+      price: 59.99,
+    },
+    {
+      name: 'cleveland',
+      category: categories[4]._id,
+      description:'Vivamus ut turpis in purus.',
+      image: 'cleveland_indians_small.png',
+      price: 59.99,
+    },
+    {
+      name: 'houston',
+      category: categories[5]._id,
+      description:'Vestibulum risus mvitae lobortis mi a leo.',
+      image: 'huston_astros_small.jpg',
+      price: 399.99,
+>>>>>>> 32e6bc4840cb144c6d968ec9d9286efd9d2e64f8
     },
     {
       name: 'Astros',
