@@ -24,13 +24,13 @@ const ticketSchema = new Schema({
     min: 0,
     default: 0
   },
-  category: {
+  team: {
     type: Schema.Types.ObjectId,
     ref: 'Team',
     required: true
   }
 });
 
-const Product = mongoose.model('Ticket', ticketSchema);
+const Ticket = mongoose.model('Ticket', ticketSchema);
 
 module.exports = Ticket;

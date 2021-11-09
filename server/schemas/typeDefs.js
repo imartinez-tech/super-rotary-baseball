@@ -16,7 +16,7 @@ const typeDefs = gql`
     }
 
     type Order {
-        _id: ID 
+        _id: ID
         purchaseDate: String
         tickets: [Ticket]
     }
@@ -33,7 +33,7 @@ const typeDefs = gql`
         session: ID
     }
 
-    Type Auth {
+    type Auth {
         token: ID
         user: User
     }
@@ -41,18 +41,18 @@ const typeDefs = gql`
     type Query {
         teams: [Team]
         tickets(team: ID, name: String): [Ticket]
-        ticket(_id: ID!): Ticket
+        ticket(_id: ID): Ticket
         user: User
-        order:(_id: ID!): Order
-        checkout(tickets: [ID]!): Checkout
+        order(_id: ID): Order
+        checkout(tickets: [ID]): Checkout
 
     }
 
     type Mutation {
         addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-        addOrder(tickets: [ID]!): Order
+        addOrder(tickets: [ID]): Order
         updateUser(firstName: String, lastName: String, email: String, password: String): User
-        updateTicket(_id: ID!, quantity: Int!); Ticket
+        updateTicket(_id: ID, quantity: Int!): Ticket
         login(email: String!, password: String!): Auth
     }
 `;

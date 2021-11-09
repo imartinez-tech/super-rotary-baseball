@@ -1,15 +1,14 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { resolvers } = require('.');
 const { User, Team, Ticket, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
-
+ 
 const resolvers = {
     Query: {
         teams: async () => {
             return await Team.find();
         }, 
-        ticket: async (parent, { team, name }) => {
+        tickets: async (parent, { team, name }) => {
             const params = {};
 
             if(team) {
@@ -23,7 +22,7 @@ const resolvers = {
             return await Ticket.find(params).populate('team');
         },
         ticket: async (parent, { _id }) => {
-            return await Teams.findById(_id).populate('ticket');
+            return await Team.findById(_id).populate('team');
         },
         user: async (parent, arg, context) => {
             if (context.user) {
