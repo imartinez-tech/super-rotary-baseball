@@ -6,8 +6,6 @@ import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
 function Ticket(item) {
-  const [state, dispatch] = useStoreContext();
-
   const {
     image,
     name,
@@ -16,7 +14,8 @@ function Ticket(item) {
     quantity
   } = item;
 
-  const { cart } = state
+  const [state, dispatch] = useStoreContext();
+  const { cart } = state;
 
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === _id)
@@ -33,7 +32,7 @@ function Ticket(item) {
     } else {
       dispatch({
         type: ADD_TO_CART,
-        product: { ...item, purchaseQuantity: 1 }
+        ticket: { ...item, purchaseQuantity: 1 }
       });
       idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
     }

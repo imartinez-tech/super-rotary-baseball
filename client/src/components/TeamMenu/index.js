@@ -5,8 +5,13 @@ import {
   UPDATE_TEAMS,
   UPDATE_CURRENT_TEAM,
 } from '../../utils/actions';
+
 import { QUERY_TEAMS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
+
+
+// search bar code
+
 
 
 function TeamMenu() {
@@ -29,7 +34,7 @@ function TeamMenu() {
       idbPromise('teams', 'get').then((teams) => {
         dispatch({
           type: UPDATE_TEAMS,
-          categories: teams,
+          teams: teams,
         });
       });
     }
@@ -45,6 +50,9 @@ function TeamMenu() {
 
   return (
     <div>
+      {/* <SearchBar input={input}
+      onChange={updateInput}
+      /> */}
       <h2>Choose a Team:</h2>
       {teams.map((item) => (
         <button

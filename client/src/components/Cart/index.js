@@ -31,7 +31,7 @@ const Cart = () => {
   useEffect(() => {
     async function getCart() {
       const cart = await idbPromise('cart', 'get');
-      dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
+      dispatch({ type: ADD_MULTIPLE_TO_CART, tickets: [...cart] });
     }
 
     if (!state.cart.length) {
@@ -54,16 +54,16 @@ const Cart = () => {
   // When the submit checkout method is invoked, loop through each item in the cart
   // Add each item id to the productIds array and then invoke the getCheckout query passing an object containing the id for all our products
   function submitCheckout() {
-    const productIds = [];
+    const ticketIds = [];
 
     state.cart.forEach((item) => {
       for (let i = 0; i < item.purchaseQuantity; i++) {
-        productIds.push(item._id);
+        ticketIds.push(item._id);
       }
     });
 
     getCheckout({
-      variables: { products: productIds },
+      variables: { tickets: ticketIds },
     });
   }
 
