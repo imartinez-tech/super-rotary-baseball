@@ -43,8 +43,8 @@ function Nav() {
   return (
     <header className="flex-row px-1">
       <h1>
-      <div class="logo">
-        <a class="logo_link" href="/" target="">
+      <div className="logo">
+        <a className="logo_link" href="/" target="">
         <img src="https://www.mlbstatic.com/team-logos/league-on-dark/1.svg" alt=""/>
         </a>
         </div>

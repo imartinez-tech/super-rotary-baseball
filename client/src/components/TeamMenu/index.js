@@ -9,6 +9,7 @@ import {
 import { QUERY_TEAMS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import BasicCard from '../BasicCard';
+import Ticket from '../Ticket';
 
 
 // search bar code
@@ -58,19 +59,21 @@ function TeamMenu() {
       /> */}
       <h2>Choose a Team:</h2>
         
-          cardtitle
-          {BasicCard()}
+         
+          
         {teams.map((item) => (
-          <div
+          <button
             key={item._id}
             onClick={() => {
               handleClick(item._id);
             }}
           >
-            
+            {BasicCard()}
             {item.name}
+            {/* {Ticket(item.image)} */}
             
-          </div>
+            
+          </button>
         ))}
         
      
