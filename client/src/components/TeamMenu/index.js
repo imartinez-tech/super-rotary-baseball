@@ -8,11 +8,11 @@ import {
 import { QUERY_TEAMS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 
-
 function TeamMenu() {
   const [state, dispatch] = useStoreContext();
 
   const { teams } = state;
+
 
   const { loading, data: teamData } = useQuery(QUERY_TEAMS);
 
@@ -21,6 +21,7 @@ function TeamMenu() {
       dispatch({
         type: UPDATE_TEAMS,
         teams: teamData.teams,
+        
       });
       teamData.teams.forEach((teams) => {
         idbPromise('teams', 'put', teams);
@@ -59,5 +60,7 @@ function TeamMenu() {
     </div>
   );
 }
+
+
 
 export default TeamMenu;
