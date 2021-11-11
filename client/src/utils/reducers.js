@@ -78,7 +78,7 @@ export const reducer = (state, action) => {
       return {
         ...state,
         currentTeam: action.currentTeam
-      }
+      };
 
     default:
       return state;

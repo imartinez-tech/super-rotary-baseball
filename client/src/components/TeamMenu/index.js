@@ -5,8 +5,15 @@ import {
   UPDATE_TEAMS,
   UPDATE_CURRENT_TEAM,
 } from '../../utils/actions';
+
 import { QUERY_TEAMS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
+import BasicCard from '../BasicCard';
+
+
+// search bar code
+
+
 
 function TeamMenu() {
   const [state, dispatch] = useStoreContext();
@@ -30,7 +37,7 @@ function TeamMenu() {
       idbPromise('teams', 'get').then((teams) => {
         dispatch({
           type: UPDATE_TEAMS,
-          categories: teams,
+          teams: teams,
         });
       });
     }
@@ -46,17 +53,27 @@ function TeamMenu() {
 
   return (
     <div>
+      {/* <SearchBar input={input}
+      onChange={updateInput}
+      /> */}
       <h2>Choose a Team:</h2>
-      {teams.map((item) => (
-        <button
-          key={item._id}
-          onClick={() => {
-            handleClick(item._id);
-          }}
-        >
-          {item.name}
-        </button>
-      ))}
+        
+          cardtitle
+          {BasicCard()}
+        {teams.map((item) => (
+          <div
+            key={item._id}
+            onClick={() => {
+              handleClick(item._id);
+            }}
+          >
+            
+            {item.name}
+            
+          </div>
+        ))}
+        
+     
     </div>
   );
 }

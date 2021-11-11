@@ -10,6 +10,7 @@ import {
   ADD_TO_CART,
   UPDATE_TICKETS,
 } from '../utils/actions';
+
 import { QUERY_TICKETS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
 import spinner from '../assets/spinner.gif';
@@ -18,7 +19,7 @@ function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
 
-  const [currentTicket, setCurrentTicket] = useState({});
+  const [currentTicket, setCurrentTicket] = useState({})
 
   const { loading, data } = useQuery(QUERY_TICKETS);
 

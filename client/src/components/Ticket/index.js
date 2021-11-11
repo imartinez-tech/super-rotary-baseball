@@ -8,8 +8,6 @@ import TicketList from "../TicketList";
 import TeamMenu from "../TeamMenu";
 
 function Ticket(item) {
-  const [state, dispatch] = useStoreContext();
-
   const {
     image,
     name,
@@ -18,7 +16,8 @@ function Ticket(item) {
     quantity
   } = item;
 
-  const { cart } = state
+  const [state, dispatch] = useStoreContext();
+  const { cart } = state;
 
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === _id)
