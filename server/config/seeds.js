@@ -1,11 +1,11 @@
 const db = require('./connection');
-const { User, Ticket, Team, } = require('../models');
+const { User, Ticket, Team } = require('../models');
 
 db.once('open', async () => {
   await Team.deleteMany();
 
   const teams = await Team.insertMany([
-    { name: 'Brave ' },
+    { name: 'Brave' },
     { name: 'Phillies' },
     { name: 'Blue Jays' },
     { name: 'Mets' },
@@ -33,9 +33,7 @@ db.once('open', async () => {
     { name: 'Tigers' },
     { name: 'Whitesox' },
     { name: 'Yankees' },
-    { name: 'Padres' },
-
-
+    { name: 'Padres' }
 
   ]);
 
@@ -46,19 +44,16 @@ db.once('open', async () => {
   const tickets = await Ticket.insertMany([
     {
       name: 'Braves',
-      description:
-        '',
-      image: 'client/public/images/braves.gif',
+      description:'likyho ioug kjg',
+      image: 'braves.gif',
       team: teams[0]._id,
       price: 50.00,
       quantity: 500
     },
     {
-<<<<<<< HEAD
       name: 'Phillies',
-      description:
-        '',
-      image: 'client/public/images/phillies.gif',
+      description:'asdas dasdasf',
+      image: 'phillies.gif',
       team: teams[0]._id,
       price: 50.00,
       quantity: 500
@@ -66,89 +61,53 @@ db.once('open', async () => {
     {
       name: 'Bluejays',
       team: teams[1]._id,
-      description:
-        '',
-      image: 'client/public/images/bluejays.png',
+      description: '',
+      image: 'bluejays.png',
       price: 50.00,
       quantity: 20
     },
     {
       name: 'Mets',
-      team: teams[1]._id,
+      team: teams[2]._id,
       description:
         '',
-      image: 'client/public/images/mets.gif',
+      image: 'mets.gif',
       price: 50.00,
       quantity: 50
     },
     {
       name: 'Diamondbacks',
-      team: teams[1]._id,
+      team: teams[3]._id,
       description:
         '',
-      image: 'client/public/images/diamondbacks.png',
+      image: 'diamondbacks.png',
       price: 50.00,
       quantity: 100
     },
     {
       name: 'Angels',
-      team: teams[2]._id,
+      team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/Angels.jpg',
+      image: 'Angels.jpg',
       price: 50.00,
       quantity: 30
-=======
-      name: 'Athletics',
-      description:'Praesent sed lacinia rutrum .',
-      image: 'athletics_small.gif',
-      category: categories[1]._id,
-      price: 59.99,
-    },
-    {
-      name: 'bluejays',
-      category: categories[2]._id,
-      description:'Donec volutpat erat erat ipsum us.',
-      image: 'blue_jays_small.png',
-      price: 59.99,
-    },
-    {
-      name: 'cincinnati',
-      category: categories[3]._id,
-      description:'Praesent placerat, odio vel euismod venenatis.',
-      image: 'cincinnati_reds_logo_small.gif',
-      price: 59.99,
-    },
-    {
-      name: 'cleveland',
-      category: categories[4]._id,
-      description:'Vivamus ut turpis in purus.',
-      image: 'cleveland_indians_small.png',
-      price: 59.99,
-    },
-    {
-      name: 'houston',
-      category: categories[5]._id,
-      description:'Vestibulum risus mvitae lobortis mi a leo.',
-      image: 'huston_astros_small.jpg',
-      price: 399.99,
->>>>>>> 32e6bc4840cb144c6d968ec9d9286efd9d2e64f8
     },
     {
       name: 'Astros',
-      team: teams[2]._id,
+      team: teams[5]._id,
       description:
         '',
-      image: 'client/public/images/astros.jpg',
+      image: 'astros.jpg',
       price: 50.00,
       quantity: 30
     },
     {
       name: 'Athletics',
-      team: teams[2]._id,
+      team: teams[6]._id,
       description:
         '',
-      image: 'client/public/images/athletics.gif',
+      image: 'athletics.gif',
       price: 50.00,
       quantity: 30
     },
@@ -157,7 +116,7 @@ db.once('open', async () => {
       team: teams[3]._id,
       description:
         '',
-      image: 'client/public/images/cardinals.png',
+      image: 'cardinals.png',
       price: 50.00,
       quantity: 100
     },
@@ -165,7 +124,7 @@ db.once('open', async () => {
       name: 'Coloradorockies',
       team: teams[4]._id,
       description: '',
-      image: 'client/public/images/coloradorockies.png',
+      image: 'coloradorockies.png',
       price: 50.00,
       quantity: 1000
     },
@@ -174,7 +133,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/cubs.gif',
+      image: 'cubs.gif',
       price: 50.00,
       quantity: 1000
     },
@@ -182,7 +141,7 @@ db.once('open', async () => {
       name: 'Diamondbacks',
       team: teams[4]._id,
       description:'',
-      image: 'client/public/images/diamondbacks.png',
+      image: 'diamondbacks.png',
       price: 7.99,
       quantity: 100
     },
@@ -191,7 +150,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/dodgers.gif',
+      image: 'dodgers.gif',
       price: 50.00,
       quantity: 600
     },
@@ -200,7 +159,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/giants.jpg',
+      image: 'giants.jpg',
       price: 50.00,
       quantity: 100
     },
@@ -209,7 +168,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/indians.png',
+      image: 'indians.png',
       price: 50.00,
       quantity: 100
     },
@@ -218,7 +177,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/mariners.gif',
+      image: 'mariners.gif',
       price: 50.00,
       quantity: 100
     },
@@ -227,7 +186,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/marlins.png',
+      image: 'marlins.png',
       price: 50.00,
       quantity: 100
     },
@@ -236,7 +195,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/mets.gif',
+      image: 'mets.gif',
       price: 50.00,
       quantity: 100
     },
@@ -245,7 +204,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/minnesottatwins.png',
+      image: 'minnesottatwins.png',
       price: 50.00,
       quantity: 100
     },
@@ -254,7 +213,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/nationals.png',
+      image: 'nationals.png',
       price: 50.00,
       quantity: 100
     },
@@ -263,7 +222,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/orioles.png',
+      image: 'orioles.png',
       price: 50.00,
       quantity: 100
     },
@@ -272,7 +231,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/padres.gif',
+      image: 'padres.gif',
       price: 50.00,
       quantity: 100
     },
@@ -281,7 +240,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/pirates.png',
+      image: 'pirates.png',
       price: 50.00,
       quantity: 100
     },
@@ -290,7 +249,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/rangers.jpg',
+      image: 'rangers.jpg',
       price: 50.00,
       quantity: 100
     },
@@ -299,7 +258,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/rays.jpg',
+      image: 'rays.jpg',
       price: 50.00,
       quantity: 100
     },
@@ -308,7 +267,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/reds.gif',
+      image: 'reds.gif',
       price: 50.00,
       quantity: 100
     },
@@ -317,7 +276,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/redsox.jpg',
+      image: 'redsox.jpg',
       price: 50.00,
       quantity: 100
     },
@@ -326,7 +285,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/tigers.jpg',
+      image: 'tigers.jpg',
       price: 50.00,
       quantity: 100
     },
@@ -335,7 +294,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/whitesox.gif',
+      image: 'whitesox.gif',
       price: 50.00,
       quantity: 100
     },
@@ -344,7 +303,7 @@ db.once('open', async () => {
       team: teams[4]._id,
       description:
         '',
-      image: 'client/public/images/yankees.gif',
+      image: 'yankees.gif',
       price: 50.00,
       quantity: 100
     },

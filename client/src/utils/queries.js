@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_TICKETS = gql`
-  query getTickets($teams: ID) {
-    tickets(teams: $teams) {
+  query getTickets($team: ID) {
+    tickets(team: $team) {
       _id
       name
       description
