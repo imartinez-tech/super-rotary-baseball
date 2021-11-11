@@ -12,9 +12,15 @@ const Home = () => {
       <SearchBar placeholder="Choose a Team..." data={Ticket}/>
     </div>
       <TeamMenu />
+ logos
       <TicketList />
       <Ticket
       />
+
+      {/* <TicketList /> */}
+      {/* <Ticket 
+      /> */}
+ main
       <Cart />
     </div>
   );

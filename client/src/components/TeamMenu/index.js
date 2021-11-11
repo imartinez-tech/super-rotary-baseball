@@ -8,6 +8,7 @@ import {
 
 import { QUERY_TEAMS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
+import BasicCard from '../BasicCard';
 
 
 // search bar code
@@ -19,6 +20,7 @@ function TeamMenu() {
 
   const { teams } = state;
 
+
   const { loading, data: teamData } = useQuery(QUERY_TEAMS);
 
   useEffect(() => {
@@ -26,6 +28,7 @@ function TeamMenu() {
       dispatch({
         type: UPDATE_TEAMS,
         teams: teamData.teams,
+        
       });
       teamData.teams.forEach((teams) => {
         idbPromise('teams', 'put', teams);
@@ -54,18 +57,27 @@ function TeamMenu() {
       onChange={updateInput}
       /> */}
       <h2>Choose a Team:</h2>
-      {teams.map((item) => (
-        <button
-          key={item._id}
-          onClick={() => {
-            handleClick(item._id);
-          }}
-        >
-          {item.name}
-        </button>
-      ))}
+        
+          cardtitle
+          {BasicCard()}
+        {teams.map((item) => (
+          <div
+            key={item._id}
+            onClick={() => {
+              handleClick(item._id);
+            }}
+          >
+            
+            {item.name}
+            
+          </div>
+        ))}
+        
+     
     </div>
   );
 }
+
+
 
 export default TeamMenu;
