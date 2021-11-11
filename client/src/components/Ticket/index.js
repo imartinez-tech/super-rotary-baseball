@@ -4,6 +4,8 @@ import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import TicketList from "../TicketList";
+import TeamMenu from "../TeamMenu";
 
 function Ticket(item) {
   const {
@@ -43,13 +45,15 @@ function Ticket(item) {
       <Link to={`/tickets/${_id}`}>
         <img
           alt={name}
-          // src={`/images/Angels.jpg`}
-          src={`/images/${image}`}
+          src={`/image/${image}`}
         />
         <p>{name}</p>
       </Link>
+     <TicketList />
+     <TeamMenu /> 
+        
       <div>
-        <div>{quantity} {pluralize("item", quantity)} in stock</div>
+        <div>{quantity} {pluralize("ticket", quantity)} in stock</div>
         <span>${price}</span>
       </div>
       <button onClick={addToCart}>Add to cart</button>

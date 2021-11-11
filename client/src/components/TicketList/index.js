@@ -34,7 +34,7 @@ function TicketList() {
     }
   }, [data, loading, dispatch]);
 
-  function filterTickets() {
+  function filterTickets() { 
     if (!currentTeam) {
       return state.tickets;
     }
@@ -49,19 +49,10 @@ function TicketList() {
       <h2>Our Tickets:</h2>
       {state.tickets.length ? (
         <div className="flex-row">
-          {filterTickets().map((ticket) => (
-            <Ticket
-              key={ticket._id}
-              _id={ticket._id}
-              image={ticket.image}
-              name={ticket.name}
-              price={ticket.price}
-              quantity={ticket.quantity}
-            />
-          ))}
+          
         </div>
       ) : (
-        <h3>You haven't added any products yet!</h3>
+        <h3>No Tickets</h3>
       )}
       {loading ? <img src={spinner} alt="loading" /> : null}
     </div>
