@@ -43,8 +43,8 @@ function Ticket(item) {
       <Link to={`/tickets/${_id}`}>
         <img
           alt={name}
-          src={`/images/Angels.jpg`} 
-          // src={`/images/${image}`}
+          // src={`/images/Angels.jpg`} 
+          src={`/images/${image}`}
         />
         <p>{name}</p>
       </Link>
