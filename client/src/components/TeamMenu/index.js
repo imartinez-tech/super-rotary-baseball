@@ -9,6 +9,9 @@ import {
 import { QUERY_TEAMS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import BasicCard from '../BasicCard';
+import { Link } from 'react-router-dom';
+import Ticket from '../Ticket';
+
 
 
 // search bar code
@@ -44,11 +47,14 @@ function TeamMenu() {
   }, [teamData, loading, dispatch]);
 
   const handleClick = (id) => {
+   console.log("click");
     dispatch({
       type: UPDATE_CURRENT_TEAM,
       currentTeams: id,
     });
   };
+
+
  
 
   return (
@@ -58,20 +64,25 @@ function TeamMenu() {
       /> */}
       <h2>Choose a Team:</h2>
         
-          cardtitle
-          {BasicCard()}
-        {teams.map((item) => (
-          <div
-            key={item._id}
-            onClick={() => {
-              handleClick(item._id);
-            }}
-          >
+         
+          
+        {teams.map((item,images) => (
+          <Link to="/tickets/:id" key={item._id}>
+          
+           
             
-            {item.name}
             
-          </div>
-        ))}
+             <BasicCard  team={item.name}
+             
+             />
+             {/* <img src={require(`../assets/images/${team}.jpg`).default} /> */}
+             
+           
+             {item.name} 
+            </Link>
+            
+        
+         ))}
         
      
     </div>
