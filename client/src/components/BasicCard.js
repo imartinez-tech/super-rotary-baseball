@@ -9,6 +9,8 @@ import Typography from '@mui/material/Typography';
 
 
 
+
+
 const bull = (
   <Box
     component="span"
@@ -18,7 +20,7 @@ const bull = (
   </Box>
 );
 
-export default function BasicCard() {
+export default function BasicCard({team}) {
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
@@ -33,7 +35,12 @@ export default function BasicCard() {
         </Typography>
         <Typography variant="body2">
           <br />
-          {'"a benevolent smile"'}
+          <img
+             style={{width: "100px"}}
+            src={require(`../assets/images/astros.jpg`).default}
+            alt={team}
+          />
+          
           
         </Typography>
       </CardContent>

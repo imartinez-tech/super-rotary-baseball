@@ -14,6 +14,8 @@ import {
 import { QUERY_TICKETS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
 import spinner from '../assets/spinner.gif';
+import TeamMenu from '../components/TeamMenu';
+import Ticket from '../components/Ticket';
 
 function Detail() {
   const [state, dispatch] = useStoreContext();
@@ -93,7 +95,7 @@ function Detail() {
           <p>{currentTicket.description}</p>
 
           <p>
-            <strong>Price:</strong>${currentTicket.price}{' '}
+            <strong>Price:</strong>$120{currentTicket.name}{currentTicket.price}{' '}
             <button onClick={addToCart}>Add to Cart</button>
             <button
               disabled={!cart.find((p) => p._id === currentTicket._id)}

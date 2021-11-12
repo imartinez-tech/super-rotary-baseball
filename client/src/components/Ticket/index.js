@@ -47,7 +47,7 @@ function Ticket(item) {
           alt={name}
           src={`/image/${image}`}
         />
-        <p>{name}</p>
+        <p>{item.name}</p>
       </Link>
      <TicketList />
      <TeamMenu /> 
@@ -56,7 +56,7 @@ function Ticket(item) {
         <div>{quantity} {pluralize("ticket", quantity)} in stock</div>
         <span>${price}</span>
       </div>
-      <button onClick={addToCart}>Add to cart</button>
+      {/* <button onClick={addToCart}>Add</button> */}
     </div>
   );
 }
